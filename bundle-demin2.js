@@ -324,8 +324,9 @@
                 G = void 0,
                 U = function (e, t, n) {
                     return t > 0 && -1 !== n.slice(0, t).indexOf(H) && n.slice(t - H.length, t) !== H ? "." + z : e
-                };
-            j.use([function (e, t, n) {
+                    };
+            
+                j.use([function (e, t, n) {
                 2 === e && n.length && n[0].lastIndexOf(H) > 0 && (n[0] = n[0].replace(G, U))
             }, B, F]), D.use([B, F]);
             var V = function (e) {
@@ -10051,6 +10052,7 @@
 
     function Eo(e) {
         console.log("THREE.WebGLRenderer", v);
+//        console.log(c.readStructMultiple(t, e, n, r));
         var t = void 0 !== (e = e || {}).canvas ? e.canvas : document.createElementNS("http://www.w3.org/1999/xhtml", "canvas"),
             n = void 0 !== e.context ? e.context : null,
             r = void 0 !== e.alpha && e.alpha,
@@ -26624,7 +26626,9 @@
             d = function (e) {
                 return function (t, n, r) {
                     return c.readStructMultiple(t, e, n, r)
+
                 }
+                                    
             };
         t.parseHeader = function (e) {
             return c.readStruct(e, u.header)
@@ -26706,6 +26710,7 @@
                 animations: c,
                 animValues: f
             }
+            console.log(r.seqIndex());
         }, (i = "undefined" != typeof reactHotLoaderGlobal ? reactHotLoaderGlobal.default : void 0) && i.register(d, "createMultipleParser", "/home/travis/build/danakt/web-hlmv/lib/modelDataParser.ts"), (o = "undefined" != typeof reactHotLoaderGlobal ? reactHotLoaderGlobal.leaveModule : void 0) && o(e)
     }).call(this, n(3)(e))
 }, function (e, t, n) {
